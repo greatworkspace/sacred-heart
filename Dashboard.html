@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Dashboard</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+		<link href="css/dasboard.css" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/Chart.min.js"></script>
+	</head>
+	<body>
+		<!-- body code goes here -->
+		<div class="container-fluid">
+			<div class="container">
+				<!--		  SideNavigation-->
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>  
+					<a href="#">About</a>
+					<a href="#">Services</a>
+					<a href="#">Clients</a>
+					<a href="#">Contact</a>
+				</div>
+			  <div id="main">			
+				<header class="head" id="head">
+						<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+						<img src="images/logo-small.png" class="rounded-circle img-fluid" alt="Placeholder-image">
+						<input type="search">
+						<a href="#"><img src="images/bell.svg" class="rounded-circle img-fluid" alt="Placeholder image"></a>
+						<a href="#"><img src="images/Memoji.svg" class="rounded-circle img-fluid" alt="Placeholder image"></a>
+				  </header>
+				  
+				  
+<!--				  PAGE cONTENT-->
+				  <section class="cards" id="cards">
+				    <div class="row">
+				      <div class="col-lg-8">
+						  <h6>Hello, Promise</h6>
+						  <h2>You Have Improved!</h2>
+					    <div class="card col-md-6"> 
+					      <div class="card-body">
+						      <h5 class="card-title">Average Scores</h5>
+							  <canvas id="myChart" class="col-md-6"></canvas>
+							</div>
+							
+						  <div class=""> 
+					      
+							  <div class="card-body">
+						      <h5 class="card-title">Average Scores</h5>
+							  </div>
+							
+                      </div>
+<!--						side 2-->
+					    <div class="col-lg-4">
+					      <div class=""> 
+							  <div class="card-body">
+					          <h4 class="card-title"><input type="week"><p>this week</p></h4>
+					          <p>Assignments<button type="button" class="btn btn-sm">see all</button></p>
+							    
+                            </div>
+					    </div>
+				    </div>
+                  </section>
+				  
+                </div>
+			</div>
+		</div>	
+		<!--	  jQuery for page-->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+				
+<!--				bAR cHART-->
+				<script>
+					var xValues = ["English", "Mathematics", "Physics", "Biology", "Chemistry"];
+					var yValues = [55, 49, 44, 24, 15];
+					var barColors = ["blue", "blue","blue","blue","blue"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: true},
+    title: {
+      display: true,
+      text: "Average Scores"
+    }
+  }
+});
+				</script>
+				
+				
+		<!--	  SideNavigation-->
+		<script>
+			//		openNav
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+				document.getElementById("main").style.marginLeft = "250px";
+			}
+			//		closeNav
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0px";
+				document.getElementById("main").style.marginLeft = "0px";
+			}
+		</script>
+				
+				
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap-4.4.1.js"></script>
+	</body>
+</html>

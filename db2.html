@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+		<link href="css/dasboard.css" rel="stylesheet">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	  <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <!---*** End: JQuery 3.3.1 version. ***--->
+<!---*** Start: Bootstrap 3.3.7 version files. ***--->
+<script language="javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!---*** End: Bootstrap 3.3.7 version files. ***--->
+
+<script language="javascript" src="https://momentjs.com/downloads/moment.js"></script>
+<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css">
+		<title>Dashboard</title>
+  </head>
+	<body>
+		
+	<div class="container-fluid">
+	  <div class="container">
+				<!--		  SideNavigation-->
+		<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>  
+					<a href="#">Dashboard</a>
+					<a href="#">Assignments</a>
+					<a href="#">Assessments</a>
+					<a href="#">logout</a>
+			</div>
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+			        
+			        <form class="form-inline my-2 my-lg-0">
+			          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		            </form>
+          </div>
+        </nav>
+		  
+	    <div class="row">
+			
+			<!--			column1-->			
+			<div class="col-lg-10">
+			  <div id="accordion1" role="tablist">
+<!--				  -->
+<!--				  card1-->
+<!--				  -->
+				  <div class="card">
+				    <div class="card-header" role="tab" id="headingOne1">
+				      <h5 class="mb-0" data-toggle="collapse" href="#collapseOne1" role="button" aria-expanded="true" aria-controls="collapseOne1"> Hello, Promise   </h5>
+			        </div>
+				    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordion1">
+				      <div class="card-body"><h1>You Have Improved!</h1></div>
+			        </div>
+			    </div>
+
+<!--				  -->
+<!--				  card2-->
+<!--				  -->
+				  <div class="card">
+				    <div class="card-header" role="tab" id="headingTwo1">
+				      <h5 class="mb-0" data-toggle="collapse" href="#collapseTwo1" role="button" aria-expanded="false" aria-controls="collapseTwo1"> Your Grades</h5>
+			        </div>
+				    <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordion1">
+				      <div class="card-body">
+						  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+						</div>
+			        </div>
+			    </div>
+				  
+<!--				  card 3-->
+				  <div class="card">
+				    <div class="card-header" role="tab" id="headingThree1">
+				      <h5 class="mb-0" data-toggle="collapse" href="#collapseThree1" role="button" aria-expanded="false" aria-controls="collapseThree1">Recomended Books</h5>
+			        </div>
+				    <div id="collapseThree1" class="collapse" role="tabpanel" aria-labelledby="headingThree1" data-parent="#accordion1">
+				      <div class="card-body">
+					    <div class="row">
+						    <div class="col-lg-4">Content goes here</div>
+						    <div class="col-lg-4">Content goes here</div>
+						    <div class="col-lg-4">Content goes here</div>
+					    </div>
+                      </div>
+			        </div>
+			    </div>
+			  </div>
+            </div>
+			
+			
+<!--			column 2-->
+		    <div class="col-lg-2">
+			  <div class="btn-group-vertical col-lg-12" role="group" aria-label="Vertical button group">
+				  <div class="btn-group" role="group">
+				    <button type="button" class="btn btn-secondary dropdown-toggle col-lg-12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+				    <div class="dropdown-menu"> <a class="dropdown-item" href="#">
+						<div class="form-group required">
+  <div class="input-group datepick">
+    <input type="text" class="form-control" name="frmSaveOffice_startdt" id="frmSaveOffice_startdt" required readonly>
+    <div class="input-group-addon">
+      <span class="glyphicon glyphicon-calendar"></span>
+    </div>
+  </div>
+</div>
+
+
+						</a> <a class="dropdown-item" href="#">Dropdown link 2</a> </div>
+			    </div>
+				  <button type="button" class="btn btn-secondary">Button 1</button>
+				  <button type="button" class="btn btn-secondary">Button 2</button>
+				  
+			  </div>
+            </div>
+	    </div>
+      </div>
+        </div>
+		
+		
+<!--		Calendar-->
+		<script>
+			$(document).ready(function() {
+  $('.datepick').datetimepicker({
+    format: 'L',
+    ignoreReadonly: true
+  });
+});
+		</script>
+		
+<!--				bAR cHART-->
+				<script>
+					var xValues = ["English", "Mathematics", "Physics", "Biology", "Chemistry"];
+					var yValues = [55, 49, 44, 24, 15];
+					var barColors = ["blue", "blue","blue","blue","blue"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: true},
+    title: {
+      display: true,
+      text: "Average Scores"
+    }
+  }
+});
+				</script>
+	<script>
+			//		openNav
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+//				document.getElementById("main").style.marginLeft = "250px";
+			}
+			//		closeNav
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0px";
+//				document.getElementById("main").style.marginLeft = "0px";
+			}
+		</script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>
